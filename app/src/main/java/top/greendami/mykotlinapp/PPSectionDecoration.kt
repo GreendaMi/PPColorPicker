@@ -78,7 +78,7 @@ class SectionDecoration<T>(var context: Context, var dataList: ArrayList<T>, val
                 if (parent.getChildAt(i).top in sectionLayout.measuredHeight..sectionLayout.measuredHeight * 2) {
                     firstTop = parent.getChildAt(i).top - sectionLayout.measuredHeight * 2
                     c!!.drawBitmap(lastBitmap, left.toFloat(), firstTop.toFloat(), null)
-                    //发现是交换的过程，绘制完交换后的Decoration后，不再绘制top位置是0的Decoration
+                    //发现是交换的过程（后一个把前一个顶出的过程），绘制完交换后的Decoration后，不再绘制top位置是0的Decoration
                     return
                 } else {
                     firstTop = 0
